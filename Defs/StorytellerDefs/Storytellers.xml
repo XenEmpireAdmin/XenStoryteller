@@ -9,26 +9,55 @@
     <portraitTiny>Portrait/XenPortSmall</portraitTiny>
     <listOrder>40</listOrder>
     <comps>
+	      <li Class="StorytellerCompProperties_ClassicIntro"/>
       <li Class="StorytellerCompProperties_RandomMain">
-        <minDaysPassed>.2</minDaysPassed>
-        <incidentMtb>.3</incidentMtb>
-        <maxThreatBigIntervalDays>7</maxThreatBigIntervalDays>
+				<allowedTargetTypes>MapPlayerHome</allowedTargetTypes>
+				<minDaysPassed>1</minDaysPassed>
+        <mtbDays>1.14</mtbDays>
+        <maxThreatBigIntervalDays>12</maxThreatBigIntervalDays>
         <categoryWeights>
-          <Misc>10</Misc>
-          <OrbitalVisitor>4</OrbitalVisitor>
-          <AllyArrival>3</AllyArrival>
-          <ShipChunkDrop>1</ShipChunkDrop>
-          <ThreatSmall>5</ThreatSmall>
-          <ThreatBig>5</ThreatBig>
+          <Misc>5.5</Misc>
+          <OrbitalVisitor>1</OrbitalVisitor>
+					<ThreatBig>0.9</ThreatBig>
+					<ThreatSmall>0.7</ThreatSmall>
+					<AllyArrival>1</AllyArrival>
+					<AllyAssistance>1</AllyAssistance>
+					<ShipChunkDrop>0.1</ShipChunkDrop>
         </categoryWeights>
       </li>
+			<li Class="StorytellerCompProperties_CategoryMTB">
+				<allowedTargetTypes>World</allowedTargetTypes>
+				<minDaysPassed>3</minDaysPassed>
+				<category>Misc</category>
+				<mtbDays>7</mtbDays>
+			</li>
       <li Class="StorytellerCompProperties_Disease">
-        <minDaysPassed>60</minDaysPassed>
+        <minDaysPassed>90</minDaysPassed>
+      </li>
+      <li Class="StorytellerCompProperties_CategoryIndividualMTBByBiome">
+        <category>CaravanTarget</category>
       </li>
     </comps>
     <desiredPopulationMin>6</desiredPopulationMin>
     <desiredPopulationMax>35</desiredPopulationMax>
     <desiredPopulationCritical>30</desiredPopulationCritical>
+		<populationIntentFromTimeCurve>
+			<points>
+				<li>0, 0.15</li>
+				<li>6, 0.15</li>
+				<li>20, 1</li>
+			</points>
+		</populationIntentFromTimeCurve>
+		<populationIntentFromPopCurve>
+			<points>
+				<li>0, 8</li>
+				<li>2, 4</li>
+				<li>16, 1</li>
+				<li>20, 0.5</li>
+				<li>23, 0</li>
+				<li>50, -1</li>
+			</points>
+		</populationIntentFromPopCurve>
   </StorytellerDef>
 
 </StorytellerDefs>
